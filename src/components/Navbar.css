@@ -1,0 +1,14 @@
+nav {
+  background: #191927;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
