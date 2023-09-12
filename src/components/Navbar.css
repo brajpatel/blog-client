@@ -1,10 +1,11 @@
 nav {
-  background: #191927;
+  min-height: 70px;
+  background: #2e2e4d;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 ul {
