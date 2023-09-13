@@ -13,17 +13,17 @@ function Navbar() {
         <nav>
             <h1>Blog Client</h1>
             <ul className={`nav-links ${displayNav ? 'show' : ''}`}>
-                <Link className='nav-link' to="/">
+                <Link className='nav-link' to="/" onClick={displayNav ? toggleNav : null}>
                     <p>Home</p>
                     <i className="fa-solid fa-house"></i>
                 </Link>
                 
-                <Link className='nav-link' to="posts">
+                <Link className='nav-link' to="posts" onClick={displayNav ? toggleNav : null}>
                     <p>Posts</p>
                     <i className="fa-solid fa-book-open-reader"></i>
                 </Link>
 
-                <Link className='nav-link' to="login">
+                <Link className='nav-link' to="login" onClick={displayNav ? toggleNav : null}y>
                     <p>Login</p>
                     <i className="fa-solid fa-right-to-bracket"></i>
                 </Link>
