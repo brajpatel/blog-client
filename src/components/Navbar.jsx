@@ -10,10 +10,12 @@ function Navbar() {
                     <p>Home</p>
                     <i className="fa-solid fa-house"></i>
                 </Link>
+                
                 <Link className='nav-link' to="posts">
                     <p>Posts</p>
-                    <i class="fa-solid fa-book-open-reader"></i>
+                    <i className="fa-solid fa-book-open-reader"></i>
                 </Link>
+
                 <Link className='nav-link' to="login">
                     <p>Login</p>
                     <i className="fa-solid fa-right-to-bracket"></i>
