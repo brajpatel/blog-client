@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Home from './components/Home';
 import Posts from './components/Posts.jsx';
+import PostDetail from './components/PostDetail';
 import Login from './components/Login';
 
 function RouteSwitch() {
