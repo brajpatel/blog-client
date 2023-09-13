@@ -52,6 +52,11 @@ nav {
     padding: 0.5rem 0;
     position: absolute;
     top: 80px;
+    left: -100%;
+    transition: 0.4s ease;
+  }
+
+  .nav-links.show {
     left: 0;
   }
 
