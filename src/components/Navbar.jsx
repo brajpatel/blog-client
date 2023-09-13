@@ -23,7 +23,7 @@ function Navbar() {
                     <i className="fa-solid fa-book-open-reader"></i>
                 </Link>
 
-                <Link className='nav-link' to="login" onClick={displayNav ? toggleNav : null}y>
+                <Link className='nav-link' to="login" onClick={displayNav ? toggleNav : null}>
                     <p>Login</p>
                     <i className="fa-solid fa-right-to-bracket"></i>
                 </Link>
