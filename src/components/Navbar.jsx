@@ -7,7 +7,8 @@ function Navbar() {
             <h1>Blog Client</h1>
             <ul>
                 <Link to="/">Home</Link>
-                <Link to="posts">Home</Link>
+                <Link to="posts">Posts</Link>
+                <Link to="login">Login</Link>
             </ul>
         </nav>
     )
