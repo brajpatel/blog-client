@@ -10,16 +10,29 @@ h2 {
     margin: 1rem;
 }
 
-.top-posts {
+.top-picks {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
 .post-thumbnail {
+    width: calc(100vw / 4);
     display: flex;
     flex-direction: column;
     border: 2px solid black;
     border-radius: 10px;
-    padding: 1rem;
+}
+
+.post-thumbnail img {
+    max-width: 100%;
+}
+
+@media(max-width: 1300px) {
+    .top-picks {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 1.2rem;
+    }
 }
