@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <nav>
             <h1>Blog Client</h1>
-            <ul>
+            <ul className='nav-links'>
                 <Link className='nav-link' to="/">
                     <p>Home</p>
                     <i className="fa-solid fa-house"></i>
@@ -21,6 +21,9 @@ function Navbar() {
                     <i className="fa-solid fa-right-to-bracket"></i>
                 </Link>
             </ul>
+            <div className='hamburger'>
+                <i className="fa-solid fa-bars"></i>
+            </div>
         </nav>
     )
 }

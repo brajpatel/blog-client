@@ -1,5 +1,5 @@
 nav {
-  min-height: 70px;
+  height: 80px;
   background: #2e2e4d;
   color: white;
   box-shadow: 0 0 10px #222222;
@@ -9,7 +9,7 @@ nav {
   padding: 0 1rem;
 }
 
-ul {
+.nav-links {
   display: flex;
   gap: 1rem;
   list-style: none;
@@ -30,4 +30,43 @@ ul {
 
 .nav-link:hover {
   border-color: #eeeeee;
+}
+
+.hamburger {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .nav-links {
+    width: 100%;
+    background: #2e2e4d;
+    border-top: 2px solid #3b3b60;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0.5rem 0;
+    position: absolute;
+    top: 80px;
+    left: 0;
+  }
+
+  .nav-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem 0;
+  }
+
+  .nav-link:hover {
+    border-color: transparent;
+    background: #3b3b60;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
