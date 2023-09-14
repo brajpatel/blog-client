@@ -9,7 +9,6 @@
     width: 90%;
     display: flex;
     align-items: center;
-    max-width: 95%;
     overflow: auto;
     padding: 3rem;
 }
@@ -47,10 +46,34 @@
 
 .post-thumbnail img {
     max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .post-info {
     font-size: 1.3rem;
     padding: 0.8rem;
     font-weight: bold;
+}
+
+@media(max-width: 1300px) {
+    .posts {
+        width: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        gap: 2rem 0;
+    }
+
+    .post-link:not(:first-child) {
+        margin-left: 0;
+    }
+    
+    .post-link:hover ~ .post-link {
+        transform: translateX(0);
+    }
+
+    .post-thumbnail:hover {
+        transform: translateY(-0.6rem);
+    }
 }
