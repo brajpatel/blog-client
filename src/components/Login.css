@@ -1,3 +1,86 @@
-.login {
-    font-size: 2rem;
+.login-modal {
+    max-width: 400px;
+    background: #222222;
+    box-shadow: 0 4px 20px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 3rem auto;
+    padding: 1rem 1.4rem;
+}
+
+.login-image-container {
+    height: 180px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border-radius: 50%;
+    border: 2px solid rgb(121, 179, 223, 0.8);
+}
+
+.login-modal img {
+    max-width: 100%;
+    border-radius: 50%;
+    border: 2px solid rgb(121, 179, 223);
+}
+
+.note {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: rgb(121, 179, 223);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+input {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    margin: 1rem 0;
+}
+
+input:focus {
+    background: rgb(200, 200, 200);
+}
+
+.login-btn {
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.login-btn:hover {
+    background: rgb(179, 204, 223);
+}
+
+.login-btn:active {
+    background: rgb(121, 179, 223);
 }
