@@ -1,6 +1,11 @@
 import './Login.css';
+import { useState } from 'react';
 
 function Login() {
+    // HANDLE INPUT VALUES
+    // const [username, setUsername] = useState('');
+    // const [password, setPassword] = useState('');
+
     return (
         <div>
             <div className='login-modal'>
