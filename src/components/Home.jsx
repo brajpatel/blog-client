@@ -14,9 +14,9 @@ function Home() {
                 <h2>Top Picks</h2>
                 <div className='top-picks'>
                     <Link to="/posts/post-one" className='link'>
-                        <div className='post-thumbnail'>
+                        <div className='home-post-thumbnail'>
                             <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
-                            <div className='post-info'>
+                            <div className='home-post-info'>
                                 <p className='thumbnail-title'>post one title</p>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque consectetur maiores tenetur ea animi ipsam...</p>
                             </div>
@@ -24,9 +24,9 @@ function Home() {
                     </Link>
  
                     <Link to="/posts/post-two" className='link'>
-                        <div className='post-thumbnail'>
+                        <div className='home-post-thumbnail'>
                             <img src="https://c4.wallpaperflare.com/wallpaper/184/515/626/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
-                            <div className='post-info'>
+                            <div className='home-post-info'>
                                 <p className='thumbnail-title'>post two title</p>
                                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam vel ipsam quaerat minus, qui labore laborum totam explicabo odit quod quidem ducimus unde modi harum?...</p>
                             </div>
@@ -34,9 +34,9 @@ function Home() {
                     </Link>
 
                     <Link to="/posts/post-three" className='link'>
-                        <div className='post-thumbnail'>
+                        <div className='home-post-thumbnail'>
                             <img src="https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-preview.jpg" alt="sample-image"/>
-                            <div className='post-info'>
+                            <div className='home-post-info'>
                                 <p className='thumbnail-title'>post three title</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolor doloribus temporibus obcaecati corrupti tempora impedit at deserunt!</p>
                             </div>

@@ -1,3 +1,31 @@
-.posts {
-    display: grid;
+.all-posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
 }
+
+.posts {
+    display: flex;
+    max-width: 90%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.post-thumbnail {
+    width: 400px;
+    background: #222222;
+    color: white;
+    box-shadow: 0 4px 20px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.post-thumbnail img {
+    max-width: 100%;
+}
+
