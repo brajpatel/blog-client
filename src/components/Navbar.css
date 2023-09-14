@@ -21,14 +21,13 @@ nav {
   align-items: center;
   gap: 0.4rem;
   border-radius: 10px;
-  border: 2px solid transparent;
-  padding: 0.35rem 0.6rem;
+  padding: 0.55rem 0.8rem;
   font-size: 1.15rem;
   transition: 0.25s ease;
 }
 
 .nav-link:hover {
-  border-color: #eeeeee;
+  background: #3b3b60;
 }
 
 .hamburger {
