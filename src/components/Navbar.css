@@ -28,7 +28,11 @@ nav {
 }
 
 .nav-link:hover {
-  border-color: rgb(121, 179, 223);
+  background: #444444;
+}
+
+.nav-link:active {
+  background: rgb(121, 179, 223);
 }
 
 .hamburger {
@@ -81,11 +85,11 @@ nav {
 
   .nav-link:hover {
     border-color: transparent;
-    background: rgb(121, 179, 223);
+    background: #444444;
   }
 
   .nav-link:active {
-    background: #444444;
+    background: rgb(121, 179, 223);
   }
 
   .hamburger {
