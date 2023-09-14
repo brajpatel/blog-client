@@ -19,11 +19,11 @@
 }
 
 .post-link:not(:first-child) {
-    margin-left: -130px;
+    margin-left: -180px;
 }
 
 .post-link:hover ~ .post-link {
-    transform: translateX(130px);
+    transform: translateX(180px);
 }
 
 .post-thumbnail {
