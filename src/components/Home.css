@@ -22,8 +22,9 @@ h2 {
 
 .post-thumbnail {
     width: calc(100vw / 4);
-    color: black;
-    box-shadow: 0 4px 20px grey;
+    background: #222222;
+    color: white;
+    box-shadow: 0 4px 20px black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +50,7 @@ h2 {
 .post-info p:first-child {
     font-size: 1.6rem;
     margin-bottom: 0.4rem;
+    color: rgb(121, 179, 223);
 }
 
 @media(max-width: 1300px) {

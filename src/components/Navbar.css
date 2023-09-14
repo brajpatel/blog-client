@@ -1,8 +1,8 @@
 nav {
   height: 80px;
-  background: #2e2e4d;
+  background: #222222;
   color: white;
-  box-shadow: 0 0 10px #222222;
+  box-shadow: 0 0 10px black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,6 +20,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  border: 2px solid transparent;
   border-radius: 10px;
   padding: 0.55rem 0.8rem;
   font-size: 1.15rem;
@@ -27,7 +28,7 @@ nav {
 }
 
 .nav-link:hover {
-  background: #3b3b60;
+  border-color: rgb(121, 179, 223);
 }
 
 .hamburger {
