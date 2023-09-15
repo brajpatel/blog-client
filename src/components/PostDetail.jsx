@@ -1,11 +1,10 @@
-import { useLocation } from "react-router-dom";
+import './PostDetail.css';
 
 function PostDetail() {
-    const { state } = useLocation();
-    
-
     return (
-        <div>Post detail here</div>
+        <div className='post-detail'>
+            <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
+        </div>
     )
 }
 
