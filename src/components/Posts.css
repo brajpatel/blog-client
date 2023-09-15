@@ -29,10 +29,9 @@
 .post-thumbnail {
     position: relative;
     width: 500px;
-    min-width: 250px;
     background: #222222;
     color: white;
-    box-shadow: -1rem 0 3rem rgb(0, 0, 0, 0.75);
+    box-shadow: -1rem 0 2rem rgb(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,6 +68,7 @@
         justify-content: space-evenly;
         align-items: flex-start;
         gap: 2rem 0;
+        padding: 1rem;
         margin-top: 0;
     }
 
@@ -80,7 +80,16 @@
         transform: translateX(0);
     }
 
+    .post-thumbnail {
+        width: 400px;
+        box-shadow: 0 5px 12px black;
+    }
+
     .post-thumbnail:hover {
         transform: translateY(-0.6rem);
+    }
+
+    .post-info {
+        padding: 0.8rem 0.4rem;
     }
 }
