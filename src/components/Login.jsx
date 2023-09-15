@@ -2,9 +2,16 @@ import './Login.css';
 import { useState } from 'react';
 
 function Login() {
-    // HANDLE INPUT VALUES
-    // const [username, setUsername] = useState('');
-    // const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleUsername = (e) => {
+        setUsername(e.target.value);
+    }
+
+    const handlePassword = (e) => {
+        setPassword(e.target.value);
+    }
 
     return (
         <div>
@@ -17,13 +24,13 @@ function Login() {
                 <form action="">
                     <div className='input-container'>
                         <label htmlFor="username">Username</label>
-                        <input id='username' type="text" required/>
+                        <input id='username' onChange={handleUsername} type="text" required/>
                     </div>
                     <div className='input-container'>
                         <label htmlFor="password">Password</label>
-                        <input id='password' type="password" required/>
+                        <input id='password' onChange={handlePassword} type="password" required/>
                     </div>
-                    <button className='login-btn' type='submit'>Login</button>
+                    <button className='login-btn' type='submit' disabled={username === '' ? true : password === '' ? true : false}>Login</button>
                 </form>
             </div>
         </div>

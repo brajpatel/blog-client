@@ -73,18 +73,31 @@ input:focus {
 }
 
 .login-btn {
+    position: relative;
     font-size: 1.2rem;
     cursor: pointer;
     outline: none;
     padding: 0.5rem 1.2rem;
     border-radius: 10px;
     border: none;
+    margin-top: 0.5rem;
 }
 
 .login-btn:hover {
-    background: rgb(179, 204, 223);
+    box-shadow: -5px 5px 0 rgb(121, 179, 223);
+    top: -5px;
+    left: 5px;
+    transition: 0.3s ease;
 }
 
 .login-btn:active {
     background: rgb(121, 179, 223);
+}
+
+.login-btn:disabled,
+.login-btn:disabled:hover {
+    background: rgb(85, 85, 85);
+    box-shadow: none;
+    top: 0;
+    left: 0;
 }
