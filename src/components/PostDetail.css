@@ -2,7 +2,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
 }
 
 .post-detail-container img {
@@ -15,15 +17,43 @@
     z-index: -1;
 }
 
-.post-detail {
+.post-detail,
+.comments {
+    width: 85%;
     background: rgb(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1.2rem 1.8rem;
 }
 
-.post-detail h2 {
+.post-detail  {
+    text-align: center;
+}
+
+.post-detail h2,
+.comments h2 {
     color: black;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment p:first-child {
+    font-weight: bold;
+}
+
+.no-comments {
+    font-size: 1.3rem;
+    font-weight: bold;
 }
