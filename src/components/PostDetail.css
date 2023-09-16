@@ -18,9 +18,9 @@
 }
 
 .post-detail,
-.comments {
-    width: 85%;
-    background: rgb(255, 255, 255, 0.7);
+.comments,
+.add-comment-container {
+    background: rgb(0, 0, 0, 0.75);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,13 +29,14 @@
     padding: 1.2rem 1.8rem;
 }
 
-.post-detail  {
-    text-align: center;
+.post-detail,
+.comments {
+    width: 85%;
+    color: white;
 }
 
-.post-detail h2,
-.comments h2 {
-    color: black;
+.post-detail  {
+    text-align: center;
 }
 
 .comments {
@@ -56,4 +57,38 @@
 .no-comments {
     font-size: 1.3rem;
     font-weight: bold;
+}
+
+.add-comment-container {
+    width: 450px;
+}
+
+.add-comment-btn {
+    position: relative;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 10px;
+    border: none;
+    margin-top: 0.5rem;
+}
+
+.add-comment-btn:hover {
+    box-shadow: 0 5px 0 rgb(121, 179, 223);
+    top: -5px;
+    transition: 0.3s ease;
+}
+
+.add-comment-btn:active {
+    top: -2px;
+    box-shadow: 0 2px 0 rgb(121, 179, 223);
+}
+
+.add-comment-btn:disabled,
+.add-comment-btn:disabled:hover {
+    background: rgb(85, 85, 85);
+    box-shadow: none;
+    top: 0;
+    left: 0;
 }

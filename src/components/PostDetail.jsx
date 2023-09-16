@@ -16,10 +16,28 @@ function PostDetail() {
             <div className='comments'>
                 <h2>Comments</h2>
                 <div className='comment'>
-                    <p>Username - date</p>
+                    <p>Name - date</p>
                     <p>Comment text</p>
                 </div>
+
                 <p className='no-comments'>This post has no comments</p>
+            </div>
+
+            <div className='add-comment-container'>
+                <h2>Add a comment</h2>
+                <form action="">
+                    <div className='input-container'>
+                        <label htmlFor="name">Name</label>
+                        <input id='name' type="text" required/>
+                    </div>
+
+                    <div className='input-container'>
+                        <label htmlFor="message">Message</label>
+                        <input id='message' type="text" required/>
+                    </div>
+                    
+                    <button className='add-comment-btn'>Add Comment</button>
+                </form>
             </div>
         </div>
     )

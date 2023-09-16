@@ -84,14 +84,14 @@ input:focus {
 }
 
 .login-btn:hover {
-    box-shadow: -5px 5px 0 rgb(121, 179, 223);
+    box-shadow: 0 5px 0 rgb(121, 179, 223);
     top: -5px;
-    left: 5px;
     transition: 0.3s ease;
 }
 
 .login-btn:active {
-    background: rgb(121, 179, 223);
+    top: -2px;
+    box-shadow: 0 2px 0 rgb(121, 179, 223);
 }
 
 .login-btn:disabled,
