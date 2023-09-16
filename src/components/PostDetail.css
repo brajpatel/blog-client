@@ -39,6 +39,10 @@
     text-align: center;
 }
 
+.post-detail p {
+    font-size: 1.1rem;
+}
+
 .comments {
     display: flex;
     flex-direction: column;
@@ -52,6 +56,11 @@
 
 .comment p:first-child {
     font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.comment p:not(:first-child) {
+    font-size: 1.1rem;
 }
 
 .no-comments {
