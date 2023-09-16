@@ -18,7 +18,8 @@
 }
 
 .home-post-thumbnail {
-    width: calc(100vw / 4);
+    height: 450px;
+    width: calc(100vw / 3.5);
     background: #222222;
     color: white;
     box-shadow: 0 5px 10px black;
@@ -59,8 +60,9 @@
     }
 
     .home-post-thumbnail {
-        display: grid;
+        height: max-content;
         width: 90%;
+        display: grid;
         grid-template-columns: 1fr 1.5fr;
         margin: 0 auto;
     }
