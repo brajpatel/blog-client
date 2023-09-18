@@ -41,7 +41,7 @@
 }
 
 .post-thumbnail:hover {
-    transform: translateY(-1rem);
+    transform: translateY(-1.5rem);
 }
 
 .post-thumbnail img {
