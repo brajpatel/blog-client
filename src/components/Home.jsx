@@ -6,20 +6,18 @@ function Home() {
     const [topPicks, setTopPicks] = useState([]);
 
     useEffect(() => {
-        getPosts();
+        (async function() {
+            const req = await fetch('');
+
+            if(req.status !== 200) {
+                setTopPicks(null);
+            }
+            else {
+                const postsData = await req.json();
+                setTopPicks(postsData);
+            }
+        })();
     }, [])
-
-    const getPosts = async () => {
-        const req = await fetch('');
-
-        if(req.status !== 200) {
-            setTopPicks(null);
-        }
-        else {
-            const postsData = await req.json();
-            setTopPicks(postsData);
-        }
-    }
 
     return !topPicks ? (
         <div>404 not found</div>
