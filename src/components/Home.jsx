@@ -1,6 +1,5 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
-import { json, Link } from 'react-router-dom';
 
 function Home() {
     const [topPicks, setTopPicks] = useState([]);

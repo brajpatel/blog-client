@@ -1,7 +1,24 @@
 import './Posts.css';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function Posts() {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+        (async function() {
+            const req = await fetch('');
+
+            if(req.status !== 200) {
+                setPosts(null);
+            }
+            else {
+                const postsData = await req.json();
+                setPosts(postsData);
+            }
+        })();
+    }, [])
+
     return (
         <div className="all-posts">
             <h2>All Posts</h2>
