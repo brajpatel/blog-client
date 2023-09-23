@@ -2,12 +2,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
+    margin: 1rem auto;
     color: white;
 }
 
 .home > div h2 {
     margin-bottom: 1rem;
+}
+
+.home > div:first-child {
+    max-width: 50%;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.home > div:first-child > p {
+    font-size: 1.25rem;
 }
 
 .top-picks {
