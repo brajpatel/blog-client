@@ -62,6 +62,12 @@
     font-weight: bold;
 }
 
+.no-posts {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 3rem;
+}
+
 @media(max-width: 1300px) {
     .featured {
         flex-direction: column;
