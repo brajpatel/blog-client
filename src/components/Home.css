@@ -20,7 +20,7 @@
     font-size: 1.25rem;
 }
 
-.top-picks {
+.featured {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -63,7 +63,7 @@
 }
 
 @media(max-width: 1300px) {
-    .top-picks {
+    .featured {
         flex-direction: column;
         align-items: center;
         gap: 1.8rem;

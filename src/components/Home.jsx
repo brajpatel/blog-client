@@ -2,18 +2,18 @@ import './Home.css';
 import { useState, useEffect } from 'react';
 
 function Home() {
-    const [topPicks, setTopPicks] = useState([]);
+    const [featuredPosts, setFeaturedPosts] = useState([]);
 
     useEffect(() => {
         (async function() {
             const req = await fetch('');
 
             if(req.status !== 200) {
-                setTopPicks(null);
+                setFeaturedPosts(null);
             }
             else {
                 const postsData = await req.json();
-                setTopPicks(postsData);
+                setFeaturedPosts(postsData);
             }
         })();
     }, [])
@@ -30,11 +30,11 @@ function Home() {
             </div>
 
             <div>
-                <h2>Top Picks</h2>
-                <div className='top-picks'>
-                    {/* {topPicks.map((post, index) => {
+                <h2>Featured</h2>
+                <div className='featured'>
+                    {/* {featuredPosts.map((post, index) => {
                         return (
-                            <Link to={`/posts/${index + 186 * 49}`} className='link'>
+                            <Link to={`/posts/${### post.id ###}`} className='link'>
                                 <div className='home-post-thumbnail'>
                                     <img src={post.image} alt="sample-image"/>
                                     <div className='home-post-info'>
