@@ -4,21 +4,21 @@ import { useState, useEffect } from 'react';
 function Home() {
     const [featuredPosts, setFeaturedPosts] = useState(null);
 
-    useEffect(() => {
-        getPosts();
-    }, [])
+    // useEffect(() => {
+    //     getPosts();
+    // }, [])
 
-    const getPosts = async () => {
-        const req = await fetch('https://young-smoke-1917.fly.dev/posts', { mode: 'cors' });
+    // const getPosts = async () => {
+    //     const req = await fetch('https://young-smoke-1917.fly.dev/posts', { mode: 'cors' });
 
-        if(req.status !== 200) {
-            return;
-        }
-        else {
-            const postsData = await req.json();
-            setFeaturedPosts(postsData);
-        }
-    }
+    //     if(req.status !== 200) {
+    //         return;
+    //     }
+    //     else {
+    //         const postsData = await req.json();
+    //         setFeaturedPosts(postsData);
+    //     }
+    // }
 
     return (
         <div className="home">
@@ -30,7 +30,7 @@ function Home() {
             </div>
 
             <div>
-                {!featuredPosts.length ? (
+                {!featuredPosts ? (
                     <p className='no-posts'>Oh no... Something has gone wrong if you can see this!</p>
                 ) : (
                     <>

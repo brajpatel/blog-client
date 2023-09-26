@@ -31,44 +31,64 @@
     width: 500px;
     background: #222222;
     color: white;
-    box-shadow: -1rem 0 2rem rgb(0, 0, 0, 0.75);
+    border: 1px solid transparent;
+    box-shadow: -1rem 0 2rem rgb(0, 0, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-radius: 10px;
+    overflow: hidden;
     transition: 0.3s ease;
 }
 
 .post-thumbnail:hover {
     transform: translateY(-1.5rem);
+    border: 1px solid rgb(148, 184, 212);
 }
 
 .post-thumbnail img {
     max-width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 }
 
-.post-info {
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, #000203 5%, rgba(36, 39, 41, 0.4) 30%, rgba(36, 39, 41, 0) 70%), linear-gradient(35deg, #010a13 10%, rgba(36, 39, 41, 0) 40%);
+    z-index: 0;
+}
+
+.thumbnail-title {
     font-size: 1.3rem;
-    padding: 1.2rem 0.8rem;
     font-weight: bold;
-    transition: 0.3s ease;
-}
-
-.post-thumbnail:hover .post-info {
-    color: rgb(121, 179, 223);
+    position: absolute;
+    bottom: 1.05rem;
+    left: 1.4rem;
+    z-index: 1;
 }
 
 @media(max-width: 1300px) {
+    .all-posts {
+        padding: 1.5rem 4rem;
+    }
+
     .posts {
-        width: auto;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        gap: 2rem 0;
-        padding: 1rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        justify-items: center;
+        gap: 2rem;
         margin-top: 0;
     }
 
@@ -81,12 +101,12 @@
     }
 
     .post-thumbnail {
-        width: 400px;
-        box-shadow: 0 5px 12px black;
+        max-width: 100%;
+        box-shadow: 0 5px 10px 2px #0f0f0f;
     }
 
     .post-thumbnail:hover {
-        transform: translateY(-0.6rem);
+        transform: translateY(0);
     }
 
     .post-info {
