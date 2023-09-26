@@ -65,7 +65,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(0deg, #000203 5%, rgba(36, 39, 41, 0.4) 30%, rgba(36, 39, 41, 0) 70%), linear-gradient(35deg, #010a13 10%, rgba(36, 39, 41, 0) 40%);
+    background: linear-gradient(0deg, #030000 5%, rgba(36, 39, 41, 0.4) 30%, rgba(36, 39, 41, 0) 70%), linear-gradient(0deg, #02070c 10%, rgba(36, 39, 41, 0) 40%);
     z-index: 0;
 }
 
@@ -109,7 +109,7 @@
         transform: translateY(0);
     }
 
-    .post-info {
-        padding: 0.8rem 0.4rem;
+    .overlay::after {
+        background: linear-gradient(0deg, #030000 5%, rgba(36, 39, 41, 0.4) 30%, rgba(36, 39, 41, 0) 70%), linear-gradient(0deg, #02070c 10%, rgba(36, 39, 41, 0) 40%);
     }
 }
