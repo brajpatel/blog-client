@@ -2,7 +2,7 @@ import './Home.css';
 import { useState, useEffect } from 'react';
 
 function Home() {
-    const [featuredPosts, setFeaturedPosts] = useState([]);
+    const [featuredPosts, setFeaturedPosts] = useState(null);
 
     useEffect(() => {
         getPosts();
@@ -12,7 +12,7 @@ function Home() {
         const req = await fetch('https://young-smoke-1917.fly.dev/posts', { mode: 'cors' });
 
         if(req.status !== 200) {
-            setFeaturedPosts(null);
+            return;
         }
         else {
             const postsData = await req.json();
