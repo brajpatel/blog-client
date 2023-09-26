@@ -6,7 +6,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 2rem;
   z-index: 2;
 }
 
@@ -58,6 +58,12 @@ nav {
 }
 
 @media(max-width: 800px) {
+  nav {
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+  }
+  
   .nav-links {
     width: 100%;
     background: #222222;
