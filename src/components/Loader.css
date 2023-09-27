@@ -10,10 +10,10 @@
 }
 
 .loader-bot {
-    height: 80px;
-    width: 80px;
+    height: 95px;
+    width: 95px;
     background: rgba(255, 255, 255, 0.1);
-    animation: loaderBotRotate 3s ease-out infinite;
+    animation: loaderBotRotate 6s ease-out infinite;
 }
 
 @keyframes loaderBotRotate {
@@ -22,9 +22,9 @@
         transform: rotate(0);
     }
 
-    75%,
+    50%,
     100% {
-        transform: rotate(-360deg);
+        transform: rotate(90deg);
     }
 }
 
@@ -35,12 +35,12 @@
 }
 
 .loader-top-1 {
-    height: 90px;
-    width: 90px;
+    height: 85px;
+    width: 85px;
     background: rgba(255, 255, 255, 0.1);
-    top: -5px;
-    left: -5px;
-    animation: loaderTopOneRotate 6s ease infinite;
+    top: 2.5px;
+    left: 2.5px;
+    animation: loaderTopOneRotate 3s ease infinite;
 }
 
 @keyframes loaderTopOneRotate {
@@ -49,16 +49,16 @@
         transform: rotate(45deg);
     }
 
-    50%,
+    75%,
     100% {
-        transform: rotate(135deg);
+        transform: rotate(-405deg);
     }
 }
 
 .loader-top-2 {
-    height: 70px;
-    width: 70px;
+    height: 60px;
+    width: 60px;
     background: rgba(255, 255, 255, 0.2);
-    top: 5px;
-    left: 5px;
+    top: 15px;
+    left: 15px;
 }
