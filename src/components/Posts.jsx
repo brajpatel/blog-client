@@ -1,10 +1,12 @@
 import './Posts.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Loader from './Loader';
 
 function Posts() {
-    const [posts, setPosts] = useState([]);
-
+    const [displayLoader, setDisplayLoader] = useState(true);
+    const [posts, setPosts] = useState(null);
+    
     // useEffect(() => {
     //     getPosts();
     // }, [])
@@ -24,63 +26,67 @@ function Posts() {
     return (
         <div className="all-posts">
             <h2>All Posts</h2>
-            <div className="posts">
-                <Link to="/posts/post-one" className='link post-link'>
-                    <div className='post-thumbnail'>
-                        <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
-                        <div className='overlay'></div>
-                            <p className='thumbnail-title'>post one title</p>
-                    </div>
-                </Link>
+                {displayLoader && <Loader/>}
 
-                <Link to="/posts/post-one" className='link post-link'>
-                    <div className='post-thumbnail'>
-                        <img src="https://c4.wallpaperflare.com/wallpaper/184/515/626/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
-                        <div className='overlay'></div>
-                            <p className='thumbnail-title'>post two title</p>
-                    </div>
-                </Link>
+                {posts && (
+                    <div className="posts">
+                        <Link to="/posts/post-one" className='link post-link'>
+                            <div className='post-thumbnail'>
+                                <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
+                                <div className='overlay'></div>
+                                    <p className='thumbnail-title'>post one title</p>
+                            </div>
+                        </Link>
 
-                <Link to="/posts/post-one" className='link post-link'>
-                    <div className='post-thumbnail'>
-                        <img src="https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-preview.jpg" alt="sample-image"/>
-                        <div className='overlay'></div>
-                            <p className='thumbnail-title'>post three title</p>
-                    </div>
-                </Link>
+                        <Link to="/posts/post-one" className='link post-link'>
+                            <div className='post-thumbnail'>
+                                <img src="https://c4.wallpaperflare.com/wallpaper/184/515/626/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
+                                <div className='overlay'></div>
+                                    <p className='thumbnail-title'>post two title</p>
+                            </div>
+                        </Link>
 
-                <Link to="/posts/post-one" className='link post-link'>
-                    <div className='post-thumbnail'>
-                        <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
-                        <div className='overlay'></div>
-                            <p className='thumbnail-title'>post one title</p>
-                    </div>
-                </Link>
+                        <Link to="/posts/post-one" className='link post-link'>
+                            <div className='post-thumbnail'>
+                                <img src="https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-preview.jpg" alt="sample-image"/>
+                                <div className='overlay'></div>
+                                    <p className='thumbnail-title'>post three title</p>
+                            </div>
+                        </Link>
 
-                <Link to="/posts/post-one" className='link post-link'>
-                    <div className='post-thumbnail'>
-                        <img src="https://c4.wallpaperflare.com/wallpaper/184/515/626/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
-                        <div className='overlay'></div>
-                            <p className='thumbnail-title'>post two title</p>
-                    </div>
-                </Link>
+                        <Link to="/posts/post-one" className='link post-link'>
+                            <div className='post-thumbnail'>
+                                <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
+                                <div className='overlay'></div>
+                                    <p className='thumbnail-title'>post one title</p>
+                            </div>
+                        </Link>
 
-                <Link to="/posts/post-one" className='link post-link'>
-                    <div className='post-thumbnail'>
-                        <img src="https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-preview.jpg" alt="sample-image"/>
-                        <div className='overlay'></div>
-                            <p className='thumbnail-title'>post three title</p>
-                    </div>
-                </Link>
+                        <Link to="/posts/post-one" className='link post-link'>
+                            <div className='post-thumbnail'>
+                                <img src="https://c4.wallpaperflare.com/wallpaper/184/515/626/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
+                                <div className='overlay'></div>
+                                    <p className='thumbnail-title'>post two title</p>
+                            </div>
+                        </Link>
 
-                <Link to="/posts/post-one" className='link post-link'>
-                    <div className='post-thumbnail'>
-                        <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
-                        <div className='overlay'></div>
-                            <p className='thumbnail-title'>post one title</p>
-                    </div>
-                </Link>
-            </div>
+                        <Link to="/posts/post-one" className='link post-link'>
+                            <div className='post-thumbnail'>
+                                <img src="https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-preview.jpg" alt="sample-image"/>
+                                <div className='overlay'></div>
+                                    <p className='thumbnail-title'>post three title</p>
+                            </div>
+                        </Link>
+
+                        <Link to="/posts/post-one" className='link post-link'>
+                            <div className='post-thumbnail'>
+                                <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
+                                <div className='overlay'></div>
+                                    <p className='thumbnail-title'>post one title</p>
+                            </div>
+                        </Link>
+                </div>
+            )}
         </div>
     )
 }

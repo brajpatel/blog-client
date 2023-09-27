@@ -34,9 +34,7 @@ function Home() {
 
             <div>
                 <h2>Featured</h2>
-                {displayLoader && (
-                    <Loader/>
-                )}
+                {displayLoader && <Loader/>}
 
                 {featuredPosts && (
                     <>
