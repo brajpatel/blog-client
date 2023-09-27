@@ -2,6 +2,7 @@ import './Home.css';
 import { useState, useEffect } from 'react';
 
 function Home() {
+    const [displayLoader, setDisplayLoader] = useState(true);
     const [featuredPosts, setFeaturedPosts] = useState(null);
 
     // useEffect(() => {
@@ -17,6 +18,7 @@ function Home() {
     //     else {
     //         const postsData = await req.json();
     //         setFeaturedPosts(postsData);
+    //         setDisplayLoader(false);
     //     }
     // }
 
@@ -30,11 +32,17 @@ function Home() {
             </div>
 
             <div>
-                {!featuredPosts ? (
-                    <p className='no-posts'>Oh no... Something has gone wrong if you can see this!</p>
-                ) : (
+                <h2>Featured</h2>
+                {displayLoader && (
+                    <div className='loader-container'>
+                        <div className="loader-bot"></div>
+                        <div className="loader-top-1"></div>
+                        <div className="loader-top-2"></div>
+                    </div>
+                )}
+
+                {featuredPosts && (
                     <>
-                        <h2>Featured</h2>
                         <div className='featured'>
                             {featuredPosts.map((post) => {
                                 return (
@@ -44,6 +52,7 @@ function Home() {
                                             <div className='home-post-info'>
                                                 <p className='thumbnail-title'>{post.title}</p>
                                                 <p>{post.content.split(' ').slice(0, 25).join(' ')}...</p>
+                                                <h2>THESE CARDS NEEDS CHANGING</h2>
                                             </div>
                                         </div>
                                     </Link>
