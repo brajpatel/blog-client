@@ -1,5 +1,6 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
+import Loader from './Loader';
 
 function Home() {
     const [displayLoader, setDisplayLoader] = useState(true);
@@ -34,11 +35,7 @@ function Home() {
             <div>
                 <h2>Featured</h2>
                 {displayLoader && (
-                    <div className='loader-container'>
-                        <div className="loader-bot"></div>
-                        <div className="loader-top-1"></div>
-                        <div className="loader-top-2"></div>
-                    </div>
+                    <Loader/>
                 )}
 
                 {featuredPosts && (
