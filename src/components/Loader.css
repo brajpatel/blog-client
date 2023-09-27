@@ -13,16 +13,19 @@
     height: 95px;
     width: 95px;
     background: rgba(255, 255, 255, 0.1);
-    animation: loaderBotRotate 6s ease-out infinite;
+    animation: loaderBotRotate 6s ease infinite;
 }
 
 @keyframes loaderBotRotate {
-    0%,
-    25% {
+    0% {
         transform: rotate(0);
     }
 
-    50%,
+    30% {
+        transform: rotate(70deg);
+    }
+
+    37.5%,
     100% {
         transform: rotate(90deg);
     }
