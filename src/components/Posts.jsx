@@ -36,50 +36,50 @@ function Posts() {
                         </Link>
 
                         <Link to="/posts/post-one" className='link post-link'>
-                            <div className='post-thumbnail'>
+                            <div className='post-card'>
                                 <img src="https://c4.wallpaperflare.com/wallpaper/184/515/626/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
                                 <div className='overlay'></div>
-                                    <p className='thumbnail-title'>post two title</p>
+                                <p className='thumbnail-title'>post two title</p>
                             </div>
                         </Link>
 
                         <Link to="/posts/post-one" className='link post-link'>
-                            <div className='post-thumbnail'>
+                            <div className='post-card'>
                                 <img src="https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-preview.jpg" alt="sample-image"/>
                                 <div className='overlay'></div>
-                                    <p className='thumbnail-title'>post three title</p>
+                                <p className='thumbnail-title'>post three title</p>
                             </div>
                         </Link>
 
                         <Link to="/posts/post-one" className='link post-link'>
-                            <div className='post-thumbnail'>
+                            <div className='post-card'>
                                 <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
                                 <div className='overlay'></div>
-                                    <p className='thumbnail-title'>post one title</p>
+                                <p className='thumbnail-title'>post one title</p>
                             </div>
                         </Link>
 
                         <Link to="/posts/post-one" className='link post-link'>
-                            <div className='post-thumbnail'>
+                            <div className='post-card'>
                                 <img src="https://c4.wallpaperflare.com/wallpaper/184/515/626/digital-digital-art-artwork-illustration-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
                                 <div className='overlay'></div>
-                                    <p className='thumbnail-title'>post two title</p>
+                                <p className='thumbnail-title'>post two title</p>
                             </div>
                         </Link>
 
                         <Link to="/posts/post-one" className='link post-link'>
-                            <div className='post-thumbnail'>
+                            <div className='post-card'>
                                 <img src="https://c4.wallpaperflare.com/wallpaper/767/612/930/nature-landscape-trees-digital-art-wallpaper-preview.jpg" alt="sample-image"/>
                                 <div className='overlay'></div>
-                                    <p className='thumbnail-title'>post three title</p>
+                                <p className='thumbnail-title'>post three title</p>
                             </div>
                         </Link>
 
                         <Link to="/posts/post-one" className='link post-link'>
-                            <div className='post-thumbnail'>
+                            <div className='post-card'>
                                 <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
                                 <div className='overlay'></div>
-                                    <p className='thumbnail-title'>post one title</p>
+                                <p className='thumbnail-title'>post one title</p>
                             </div>
                         </Link>
                 </div>
