@@ -2,10 +2,11 @@ import './Posts.css';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from './Loader';
+import PostCard from './PostCard';
 
 function Posts() {
-    const [displayLoader, setDisplayLoader] = useState(true);
-    const [posts, setPosts] = useState(null);
+    const [displayLoader, setDisplayLoader] = useState(false);
+    const [posts, setPosts] = useState(true);
     
     // useEffect(() => {
     //     getPosts();
@@ -31,11 +32,7 @@ function Posts() {
                 {posts && (
                     <div className="posts">
                         <Link to="/posts/post-one" className='link post-link'>
-                            <div className='post-thumbnail'>
-                                <img src="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg" alt="sample-image"/>
-                                <div className='overlay'></div>
-                                    <p className='thumbnail-title'>post one title</p>
-                            </div>
+                            <PostCard title="post one title" image="https://c4.wallpaperflare.com/wallpaper/175/524/956/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg"/>
                         </Link>
 
                         <Link to="/posts/post-one" className='link post-link'>
