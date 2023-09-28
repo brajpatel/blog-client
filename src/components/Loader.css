@@ -21,11 +21,11 @@
         transform: rotate(0);
     }
 
-    30% {
+    32.5% {
         transform: rotate(70deg);
     }
 
-    37.5%,
+    40%,
     100% {
         transform: rotate(90deg);
     }
