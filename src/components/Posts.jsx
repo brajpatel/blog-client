@@ -11,18 +11,21 @@ function Posts() {
     useEffect(() => {
         fetch('https://young-smoke-1917.fly.dev/posts')
             .then((response) => {
-                if(response.ok) {
+                if(response.status === 200) {
                     return response.json();
                 }
             })
             .then((data) => {
+                alert(data)
                 setPosts(data);
             })
             .catch((err) => {
                 console.error("Error fetching posts:", err);
             })
             .finally(() => {
-                setDisplayLoader(false);
+                if(posts) {
+                    setDisplayLoader(false);                    
+                }
             })
     }, [])
 
@@ -34,7 +37,9 @@ function Posts() {
                 {posts && (
                     <div className="posts">
                         {posts.map((post) => {
-                            
+                            <Link to={`/posts/${post._id}`} key={post._id}>
+                                <PostCard title={post.title} image={post.image}/>
+                            </Link>
                         })}
                     </div>
                 )}
