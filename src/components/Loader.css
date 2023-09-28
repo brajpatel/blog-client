@@ -43,10 +43,10 @@
     background: rgba(255, 255, 255, 0.15);
     top: 2.5px;
     left: 2.5px;
-    animation: loaderTopOneRotate 3s ease infinite;
+    animation: loaderTopRotate 3s ease infinite;
 }
 
-@keyframes loaderTopOneRotate {
+@keyframes loaderTopRotate {
     0% {
         transform: rotate(45deg);
     }
