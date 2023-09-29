@@ -16,15 +16,14 @@ function Posts() {
                 }
             })
             .then((data) => {
+                console.log(data)
                 setPosts(data);
             })
             .catch((err) => {
                 console.error("Error fetching posts:", err);
             })
             .finally(() => {
-                if(posts) {
-                    setDisplayLoader(false);                    
-                }
+                setDisplayLoader(false);
             })
     }, [])
 
@@ -36,9 +35,11 @@ function Posts() {
                 {posts && (
                     <div className="posts">
                         {posts.map((post) => {
-                            <Link to={`/posts/${post._id}`} key={post._id}>
-                                <PostCard title={post.title} image={post.image}/>
-                            </Link>
+                            return (
+                                <Link to={`/posts/${post._id}`} key={post._id} className="link post-link">
+                                    <PostCard title={post.title} image={post.image}/>
+                                </Link>
+                            )
                         })}
                     </div>
                 )}
