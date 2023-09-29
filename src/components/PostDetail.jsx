@@ -34,7 +34,7 @@ function PostDetail() {
                 </div>
 
                 <div className='add-comment-container'>
-                    <h2>Add a comment</h2>
+                    <h2>Leave a Reply</h2>
                     <form action="">
                         <div className='input-container'>
                             <label htmlFor="name">Name</label>
@@ -46,7 +46,7 @@ function PostDetail() {
                             <input id='message' type="text" required/>
                         </div>
                         
-                        <button className='add-comment-btn'>Add Comment</button>
+                        <button className='add-comment-btn'>Post Comment</button>
                     </form>
                 </div>
             </div>
