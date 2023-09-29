@@ -16,7 +16,6 @@ function Posts() {
                 }
             })
             .then((data) => {
-                alert(data)
                 setPosts(data);
             })
             .catch((err) => {
