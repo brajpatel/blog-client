@@ -59,7 +59,7 @@ input {
     position: relative;
     font-size: 1.1rem;
     padding: 0.6rem 1.2rem;
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
     border: none;
     margin: 1rem 0;
@@ -78,7 +78,7 @@ input:focus {
     cursor: pointer;
     outline: none;
     padding: 0.5rem 1.2rem;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     margin-top: 0.5rem;
 }
