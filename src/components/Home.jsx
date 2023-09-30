@@ -4,6 +4,7 @@ import Loader from './Loader';
 import PostCard from './PostCard';
 
 function Home(props) {
+    const { displayLoader, posts } = props;
 
     return (
         <div className="home">

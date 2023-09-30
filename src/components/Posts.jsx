@@ -4,6 +4,7 @@ import Loader from './Loader';
 import PostCard from './PostCard';
 
 function Posts(props) {
+    const { displayLoader, posts } = props;
 
     return (
         <div className="all-posts">

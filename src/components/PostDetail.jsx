@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PostCard from './PostCard';
 
 function PostDetail(props) {
+    const { displayLoader, posts } = props;
 
     return (
         <div className='post-detail-container'>
