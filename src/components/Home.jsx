@@ -1,27 +1,30 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Loader from './Loader';
+import PostCard from './PostCard';
 
 function Home() {
     const [displayLoader, setDisplayLoader] = useState(true);
     const [featuredPosts, setFeaturedPosts] = useState(null);
 
-    // useEffect(() => {
-    //     getPosts();
-    // }, [])
-
-    // const getPosts = async () => {
-    //     const req = await fetch('https://young-smoke-1917.fly.dev/posts', { mode: 'cors' });
-
-    //     if(req.status !== 200) {
-    //         return;
-    //     }
-    //     else {
-    //         const postsData = await req.json();
-    //         setFeaturedPosts(postsData);
-    //         setDisplayLoader(false);
-    //     }
-    // }
+    useEffect(() => {
+        fetch('https://young-smoke-1917.fly.dev/posts')
+            .then((response) => {
+                if(response.status === 200) {
+                    return response.json();
+                }
+            })
+            .then((data) => {
+                setFeaturedPosts(data);
+            })
+            .catch((err) => {
+                console.error("Error fetching posts:", err);
+            })
+            .finally(() => {
+                setDisplayLoader(false);
+            })
+    }, [])
 
     return (
         <div className="home">
@@ -37,24 +40,15 @@ function Home() {
                 {displayLoader && <Loader/>}
 
                 {featuredPosts && (
-                    <>
-                        <div className='featured'>
-                            {featuredPosts.map((post) => {
-                                return (
-                                    <Link to={`/posts/${post.id}`} key={post.id} className='link'>
-                                        <div className='home-post-thumbnail'>
-                                            <img src={post.image} alt="sample-image"/>
-                                            <div className='home-post-info'>
-                                                <p className='thumbnail-title'>{post.title}</p>
-                                                <p>{post.content.split(' ').slice(0, 25).join(' ')}...</p>
-                                                <h2>THESE CARDS NEEDS CHANGING</h2>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                )
-                            })}
-                        </div>
-                    </>
+                    <div className="featured-posts">
+                        {featuredPosts.map((post) => {
+                            return (
+                                <Link to={`/posts/${post._id}`} key={post._id} className="link post-link">
+                                    <PostCard title={post.title} image={post.image} page="home"/>
+                                </Link>
+                            )
+                        })}
+                    </div>
                 )}
             </div>
 

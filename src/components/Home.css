@@ -20,7 +20,7 @@
     font-size: 1.25rem;
 }
 
-.featured {
+.featured-posts {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
