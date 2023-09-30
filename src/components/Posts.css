@@ -18,11 +18,15 @@
     transition: 0.3s ease;
 }
 
-.post-link:not(:first-child) {
+.post-link.posts-page:hover {
+    transform: translateY(-1.5rem);
+}
+
+.post-link.posts-page:not(:first-child) {
     margin-left: -280px;
 }
 
-.post-link:hover ~ .post-link {
+.post-link.posts-page:hover ~ .post-link {
     transform: translateX(180px);
 }
 

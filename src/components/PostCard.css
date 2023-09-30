@@ -15,7 +15,6 @@
 }
 
 .post-card:hover {
-    transform: translateY(-1.5rem);
     border: 1px solid rgb(148, 184, 212);
 }
 

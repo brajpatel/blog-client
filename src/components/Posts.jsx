@@ -36,7 +36,7 @@ function Posts() {
                     <div className="posts">
                         {posts.map((post) => {
                             return (
-                                <Link to={`/posts/${post._id}`} key={post._id} className="link post-link">
+                                <Link to={`/posts/${post._id}`} key={post._id} className="link post-link posts-page">
                                     <PostCard title={post.title} image={post.image}/>
                                 </Link>
                             )

@@ -44,7 +44,7 @@ function Home() {
                         {featuredPosts.map((post) => {
                             return (
                                 <Link to={`/posts/${post._id}`} key={post._id} className="link post-link">
-                                    <PostCard title={post.title} image={post.image} page="home"/>
+                                    <PostCard title={post.title} image={post.image}/>
                                 </Link>
                             )
                         })}
