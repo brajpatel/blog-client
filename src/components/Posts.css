@@ -30,7 +30,7 @@
     transform: translateX(180px);
 }
 
-@media(max-width: 1300px) {
+@media(max-width: 1200px) {
     .all-posts {
         padding: 1.5rem 4rem;
     }
@@ -44,11 +44,19 @@
         margin-top: 0;
     }
 
-    .post-link:not(:first-child) {
+    .post-link {
+        width: 100%;
+    }
+
+    .post-link.posts-page:hover {
+        transform: translateY(0);
+    }
+
+    .post-link.posts-page:not(:first-child) {
         margin-left: 0;
     }
     
-    .post-link:hover ~ .post-link {
+    .post-link.posts-page:hover ~ .post-link {
         transform: translateX(0);
     }
 }
