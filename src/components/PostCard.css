@@ -51,16 +51,28 @@
 }
 
 @media(max-width: 1300px) {
-    .post-thumbnail {
+    .post-card {
         width: 100%;
         box-shadow: 0 5px 10px 2px #0f0f0f;
     }
 
-    .post-thumbnail:hover {
+    .post-card:hover {
         transform: translateY(0);
+    }
+
+    .post-card img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 
     .overlay::after {
         background: linear-gradient(0deg, #030000 5%, rgba(36, 39, 41, 0.4) 30%, rgba(36, 39, 41, 0) 70%), linear-gradient(0deg, #02070c 10%, rgba(36, 39, 41, 0) 40%);
+    }
+}
+
+@media(max-width: 970px) {
+    .post-card {
+        width: 85vw;
     }
 }
