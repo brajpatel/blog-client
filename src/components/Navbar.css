@@ -22,7 +22,7 @@ nav {
   align-items: center;
   gap: 0.4rem;
   border: 2px solid transparent;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 0.55rem 0.8rem;
   font-size: 1.15rem;
   transition: 0.25s ease;
