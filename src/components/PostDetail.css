@@ -30,8 +30,8 @@
 
 .post-image {
     max-width: 70%;
-    overflow: hidden;
     border-radius: 5px;
+    overflow: hidden;
 }
 
 .post-image img {
@@ -40,7 +40,7 @@
 }
 
 .post-image img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .post-detail p {

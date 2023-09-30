@@ -1,30 +1,9 @@
 import './Home.css';
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from './Loader';
 import PostCard from './PostCard';
 
-function Home() {
-    const [displayLoader, setDisplayLoader] = useState(true);
-    const [featuredPosts, setFeaturedPosts] = useState(null);
-
-    useEffect(() => {
-        fetch('https://young-smoke-1917.fly.dev/posts')
-            .then((response) => {
-                if(response.status === 200) {
-                    return response.json();
-                }
-            })
-            .then((data) => {
-                setFeaturedPosts(data);
-            })
-            .catch((err) => {
-                console.error("Error fetching posts:", err);
-            })
-            .finally(() => {
-                setDisplayLoader(false);
-            })
-    }, [])
+function Home(props) {
 
     return (
         <div className="home">
@@ -39,9 +18,9 @@ function Home() {
                 <h2>Featured</h2>
                 {displayLoader && <Loader/>}
 
-                {featuredPosts && (
+                {posts && (
                     <div className="featured-posts">
-                        {featuredPosts.map((post) => {
+                        {posts.map((post) => {
                             return (
                                 <Link to={`/posts/${post._id}`} key={post._id} className="link post-link">
                                     <PostCard title={post.title} image={post.image}/>
