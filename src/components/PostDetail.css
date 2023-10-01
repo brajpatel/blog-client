@@ -26,25 +26,20 @@
     text-align: center;
     background: #222222;
     box-shadow: 0 5px 10px 2px #0f0f0f;
+    z-index: 1;
 }
 
 .post-image {
     max-width: 70%;
-    border-radius: 5px;
-    overflow: hidden;
 }
 
 .post-image img {
     max-width: 100%;
-    transition: 0.3s ease;
-}
-
-.post-image img:hover {
-    transform: scale(1.05);
+    border-radius: 5px;
 }
 
 .post-detail p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .comments-section {

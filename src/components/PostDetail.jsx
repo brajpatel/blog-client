@@ -26,6 +26,7 @@ function PostDetail(props) {
             })
             .then((data) => {
                 setPost(data);
+                setComments(data.comments);
             })
             .catch((err) => {
                 console.error("Error fetching the selected post:", err);
@@ -46,20 +47,12 @@ function PostDetail(props) {
             {post && (
                 <>
                     <div className='post-detail'>
-                        <h2>Post Title - 23/04/09 - 10:38:08</h2>
+                        <h2>{post.title}</h2>
+                        <p>{post.date_added}</p>
                         <div className='post-image'>
-                            <img src="https://r4.wallpaperflare.com/wallpaper/892/692/922/howl-s-moving-castle-studio-ghibli-fantasy-art-clouds-daylight-hd-wallpaper-3be62c2d93012fc995842bf94d4cdc00.jpg" alt="post-image"/>
+                            <img src={post.image} alt={post.title}/>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic fugit sed ut accusamus nobis. Dignissimos excepturi eius illo nulla perferendis!
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere sint aliquid cumque, fuga, officia libero cum modi iusto harum suscipit veniam quas, numquam quos aperiam distinctio eum! Quas, quia inventore.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sapiente necessitatibus nihil eum quis sunt saepe, nulla culpa expedita soluta eligendi libero vel qui animi illo porro. Dolore at libero cumque aliquid natus quisquam vel recusandae, maxime mollitia porro dolorum iste, suscipit itaque. Non minus repudiandae quos voluptatibus, asperiores obcaecati!
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, quam?
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic fugit sed ut accusamus nobis. Dignissimos excepturi eius illo nulla perferendis!
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere sint aliquid cumque, fuga, officia libero cum modi iusto harum suscipit veniam quas, numquam quos aperiam distinctio eum! Quas, quia inventore.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sapiente necessitatibus nihil eum quis sunt saepe, nulla culpa expedita soluta eligendi libero vel qui animi illo porro. Dolore at libero cumque aliquid natus quisquam vel recusandae, maxime mollitia porro dolorum iste, suscipit itaque. Non minus repudiandae quos voluptatibus, asperiores obcaecati!
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, quam?
-                        </p>
+                        <p>{post.content}</p>
                     </div>
 
                     <div className='comments-section'>
