@@ -11,7 +11,10 @@ function PostDetail(props) {
 
     const [suggestedPosts, setSuggestedPosts] = useState(null);
 
-
+    useEffect(() => {
+        let filteredPosts = posts.filter((post) => post._id !== postId);
+        setSuggestedPosts(filteredPosts);
+    }, [])
 
     return (
         <div className='post-detail-container'>
