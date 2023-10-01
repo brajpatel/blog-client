@@ -35,7 +35,7 @@ function RouteSwitch() {
         <Routes>
           <Route path="/" element={<Home displayLoader={displayLoader} posts={posts}/>}/>
           <Route path="/posts" element={<Posts displayLoader={displayLoader} posts={posts}/>}/>
-          <Route path="/posts/:id" element={<PostDetail displayLoader={displayLoader} posts={posts}/>}/>
+          <Route path="/posts/:id" element={<PostDetail posts={posts}/>}/>
           <Route path="/login" element={<Login/>}/>
         </Routes>
       </BrowserRouter>
