@@ -1,3 +1,7 @@
+.home {
+    animation: fadeIn 0.3s ease forwards;
+}
+
 .home > div {
     display: flex;
     flex-direction: column;

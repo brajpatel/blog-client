@@ -37,7 +37,7 @@ function PostDetail(props) {
     }, [])
 
     return (
-        <div className='post-detail-container'>
+        <div>
             {displayLoader && (
                 <div className='loader-box'>
                     <Loader/>
@@ -45,7 +45,7 @@ function PostDetail(props) {
             )}
 
             {post && (
-                <>
+                <div className='post-detail-container'>
                     <div className='post-detail'>
                         <h2>{post.title}</h2>
                         <p>{post.date_added}</p>
@@ -98,7 +98,7 @@ function PostDetail(props) {
                             </div>
                         )}
                     </div>
-                </>
+                </div>
             )}
         </div>
     )
