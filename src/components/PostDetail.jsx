@@ -1,11 +1,17 @@
 import './PostDetail.css';
+import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import Loader from './Loader';
 import PostCard from './PostCard';
 
 function PostDetail(props) {
     const { displayLoader, posts } = props;
     const params = useParams();
     const postId = params.id;
+
+    const [suggestedPosts, setSuggestedPosts] = useState(null);
+
+
 
     return (
         <div className='post-detail-container'>
@@ -57,9 +63,20 @@ function PostDetail(props) {
 
             <div className='suggested-posts'>
                 <h2>Suggested Posts</h2>
-                <div>
 
-                </div>
+                {displayLoader && <Loader/>}
+
+                {suggestedPosts && (
+                    <div>
+                        {suggestedPosts.map((post) => {
+                            return (
+                                <Link to={`/posts/${post._id}`} key={post._id} className="link post-link posts-page">
+                                    <PostCard title={post.title} image={post.image}/>
+                                </Link>
+                            )
+                        })}
+                    </div>
+                )}
             </div>
         </div>
     )
