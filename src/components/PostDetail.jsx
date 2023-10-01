@@ -1,9 +1,11 @@
 import './PostDetail.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import PostCard from './PostCard';
 
 function PostDetail(props) {
     const { displayLoader, posts } = props;
+    const params = useParams();
+    const postId = params.id;
 
     return (
         <div className='post-detail-container'>
