@@ -48,11 +48,11 @@ function PostDetail(props) {
                 <div className='post-detail-container'>
                     <div className='post-detail'>
                         <h2>{post.title}</h2>
-                        <p>{post.date_added}</p>
+                        <p className='post-date'>{post.date_added}</p>
                         <div className='post-image'>
                             <img src={post.image} alt={post.title}/>
                         </div>
-                        <p>{post.content}</p>
+                        <p className='post-content'>{post.content}</p>
                     </div>
 
                     <div className='comments-section'>

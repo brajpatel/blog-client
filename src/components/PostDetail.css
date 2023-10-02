@@ -34,6 +34,7 @@
 
 .post-image {
     max-width: 70%;
+    box-shadow: 0 0 10px black;
 }
 
 .post-image img {
@@ -41,8 +42,12 @@
     border-radius: 5px;
 }
 
-.post-detail p {
+.post-date {
     font-size: 1.2rem;
+}
+
+.post-content {
+    font-size: 1.4rem;
 }
 
 .comments-section {
