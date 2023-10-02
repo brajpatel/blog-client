@@ -77,7 +77,7 @@ function PostDetail(props) {
 
                         <div className='add-comment-container'>
                             <h2>Leave a Reply</h2>
-                            <form action="">
+                            <div className='comment-form'>
                                 <div className='input-container'>
                                     <label htmlFor="name">Name</label>
                                     <input id='name' type="text" required/>
@@ -88,8 +88,8 @@ function PostDetail(props) {
                                     <input id='message' type="text" required/>
                                 </div>
                                 
-                                <button className='add-comment-btn'>Post Comment</button>
-                            </form>
+                                <div className='add-comment-btn'>Post Comment</div>
+                            </div>
                         </div>
                     </div>
 
