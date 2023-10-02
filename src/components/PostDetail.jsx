@@ -36,6 +36,10 @@ function PostDetail(props) {
             })
     }, [])
 
+    const submitComment = () => {
+        fetch()
+    }
+
     return (
         <div>
             {displayLoader && (
@@ -88,7 +92,7 @@ function PostDetail(props) {
                                     <input id='message' type="text" required/>
                                 </div>
                                 
-                                <div className='add-comment-btn'>Post Comment</div>
+                                <div className='add-comment-btn' onClick={submitComment}>Post Comment</div>
                             </div>
                         </div>
                     </div>
