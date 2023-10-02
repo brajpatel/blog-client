@@ -1,7 +1,7 @@
 .post-detail-container {
     position: relative;
     display: grid;
-    grid-template: auto 1fr / 2.5fr 1fr;
+    grid-template: repeat(2, auto) / 2fr 1fr;
     gap: 1rem;
     padding: 1.5rem;
     opacity: 0;
@@ -55,18 +55,27 @@
     background: #222222;
     box-shadow: 0 5px 10px 2px #0f0f0f;
     border-radius: 5px;
-    padding: 0 1rem;
+    padding: 1rem;
 }
 
-.comments {
+.comments-section > div {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.comments {
+    width: 95%;
     border-bottom: 1px solid #666666;
 }
 
+.comments div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .comment {
-    border: 1px solid rgb(255, 255, 255, 0.5);
+    border: 1px solid rgb(255, 255, 255, 0.35);
     border-radius: 5px;
     padding: 1rem;
     display: flex;
@@ -135,8 +144,13 @@
     align-items: center;
 }
 
-@media(max-width: 1000px) {
-    .add-comment-container {
-        width: 85%;
+@media(max-width: 1300px) {
+    .post-detail-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .suggested-posts {
+        height: auto;
     }
 }
