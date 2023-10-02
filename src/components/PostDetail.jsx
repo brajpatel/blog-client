@@ -58,12 +58,21 @@ function PostDetail(props) {
                     <div className='comments-section'>
                         <div className='comments'>
                             <h2>Comments</h2>
-                            <div className='comment'>
-                                <p>Name - date</p>
-                                <p>Comment text</p>
-                            </div>
+                            {comments.length ? (
+                                <>
+                                    {comments.map((comment) => {
+                                        return (
+                                            <div className='comment'>
+                                                <p>{comment.name}</p>
+                                                <p>{comment.message}</p>
+                                            </div>
+                                        )
+                                    })}
+                                </>
+                            ) : (
+                                <p className='no-comments'>This post has no comments</p>
+                            )}
 
-                            <p className='no-comments'>This post has no comments</p>
                         </div>
 
                         <div className='add-comment-container'>
