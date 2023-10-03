@@ -14,7 +14,6 @@ function PostDetail(props) {
     const [comments, setComments] = useState(null);
     const [commentName, setCommentName] = useState('');
     const [commentMessage, setCommentMessage] = useState('');
-    const [disableCommentSubmit, setDisableCommentSubmit] = useState(true);
     const [suggestedPosts, setSuggestedPosts] = useState(null);
 
     useEffect(() => {
@@ -48,17 +47,17 @@ function PostDetail(props) {
     }
 
     const submitComment = () => {
-        // fetch(`https://young-smoke-1917.fly.dev/posts/${postId}`, {
-        //     method: 'POST',
-        //     headers: {
-        //         'Accept': 'application/json',
-        //         'Content-Type': 'application/json'
-        //     },
-        //     body: JSON.stringify({
-        //         name: commentName,
-        //         message: commentMessage
-        //     })
-        // })
+        fetch(`https://young-smoke-1917.fly.dev/posts/${postId}`, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: commentName,
+                message: commentMessage
+            })
+        })
     }
 
     return (
@@ -113,7 +112,7 @@ function PostDetail(props) {
                                     <input id='message' onInput={handleCommentMessage} type="text" required/>
                                 </div>
                                 
-                                <button className='add-comment-btn' onClick={submitComment}>Post Comment</button>
+                                <button className='add-comment-btn' onClick={submitComment} type='button'>Post Comment</button>
                             </form>
                         </div>
                     </div>
