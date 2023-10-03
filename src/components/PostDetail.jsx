@@ -1,11 +1,10 @@
 import './PostDetail.css';
 import { useEffect, useState } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Loader from './Loader';
-import PostCard from './PostCard';
 
 function PostDetail(props) {
-    const { posts } = props;
+    const { setCurrentPost } = props;
     const params = useParams();
     const postId = params.id;
     const navigate = useNavigate();
@@ -15,12 +14,8 @@ function PostDetail(props) {
     const [comments, setComments] = useState(null);
     const [commentName, setCommentName] = useState('');
     const [commentMessage, setCommentMessage] = useState('');
-    const [suggestedPosts, setSuggestedPosts] = useState(null);
 
     useEffect(() => {
-        let filteredPosts = posts.filter((post) => post._id !== postId);
-        setSuggestedPosts(filteredPosts);
-
         fetch(`https://young-smoke-1917.fly.dev/posts/${postId}`)
             .then((response) => {
                 if(response.status === 200) {
@@ -35,6 +30,7 @@ function PostDetail(props) {
                 console.error("Error fetching the selected post:", err);
             })
             .finally(() => {
+                setCurrentPost(postId);
                 setDisplayLoader(false);
             })
     }, [])
@@ -62,7 +58,7 @@ function PostDetail(props) {
             })
         })
 
-        navigate(`/posts/${postId}`);
+        navigate('/redirect');
     }
 
     return (
@@ -120,21 +116,6 @@ function PostDetail(props) {
                                 <button className='add-comment-btn' onClick={submitComment} type='button'>Post Comment</button>
                             </form>
                         </div>
-                    </div>
-
-                    <div className='suggested-posts'>
-                        <h2>Suggested Posts</h2>
-                        {suggestedPosts && (
-                            <div>
-                                {suggestedPosts.map((post) => {
-                                    return (
-                                        <Link to={`/posts/${post._id}`} key={post._id} className="link post-link posts-page">
-                                            <PostCard title={post.title} image={post.image}/>
-                                        </Link>
-                                    )
-                                })}
-                            </div>
-                        )}
                     </div>
                 </div>
             )}

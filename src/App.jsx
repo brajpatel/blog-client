@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Home from './components/Home';
 import Posts from './components/Posts.jsx';
@@ -11,6 +11,7 @@ import NotFound from './components/NotFound';
 function App() {
     const [displayLoader, setDisplayLoader] = useState(true);
     const [posts, setPosts] = useState(null);
+    const [currentPost, setCurrentPost] = useState(undefined);
     
     useEffect(() => {
         fetch('https://young-smoke-1917.fly.dev/posts')
@@ -36,8 +37,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home displayLoader={displayLoader} posts={posts}/>}/>
           <Route path="/posts" element={<Posts displayLoader={displayLoader} posts={posts}/>}/>
-          <Route path="/posts/:id" element={<PostDetail posts={posts}/>}/>
+          <Route path="/posts/:id" element={<PostDetail setCurrentPost={setCurrentPost}/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="/redirect" element={<Navigate to={`/posts/${currentPost}`}/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
