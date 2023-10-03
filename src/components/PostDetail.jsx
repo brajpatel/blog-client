@@ -1,6 +1,6 @@
 import './PostDetail.css';
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import Loader from './Loader';
 import PostCard from './PostCard';
 
@@ -8,6 +8,7 @@ function PostDetail(props) {
     const { posts } = props;
     const params = useParams();
     const postId = params.id;
+    const navigate = useNavigate();
 
     const [displayLoader, setDisplayLoader] = useState(true);
     const [post, setPost] = useState(null);
@@ -47,6 +48,8 @@ function PostDetail(props) {
     }
 
     const submitComment = () => {
+        if(commentName === '' || commentMessage === '') return;
+
         fetch(`https://young-smoke-1917.fly.dev/posts/${postId}`, {
             method: 'POST',
             headers: {
@@ -58,6 +61,8 @@ function PostDetail(props) {
                 message: commentMessage
             })
         })
+
+        navigate(`/posts/${postId}`);
     }
 
     return (
