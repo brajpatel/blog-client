@@ -1,3 +1,29 @@
 .not-found {
-    background: red;
+    min-height: 70vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.not-found div {
+    margin-bottom: -1.5rem;
+    font-size: 1.6rem;
+    z-index: 1;
+}
+
+.not-found p > .link {
+    color: rgb(121, 179, 223);
+    border-bottom: 1px solid transparent;
+    margin-left: 0.4rem;
+}
+
+.not-found p > .link:hover {
+    border-bottom: 2px solid rgb(121, 179, 223);
+}
+
+.not-found img {
+    max-width: 400px;
 }
