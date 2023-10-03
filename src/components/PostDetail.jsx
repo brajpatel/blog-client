@@ -12,6 +12,9 @@ function PostDetail(props) {
     const [displayLoader, setDisplayLoader] = useState(true);
     const [post, setPost] = useState(null);
     const [comments, setComments] = useState(null);
+    const [commentName, setCommentName] = useState('');
+    const [commentMessage, setCommentMessage] = useState('');
+    const [disableCommentSubmit, setDisableCommentSubmit] = useState(true);
     const [suggestedPosts, setSuggestedPosts] = useState(null);
 
     useEffect(() => {
@@ -36,8 +39,26 @@ function PostDetail(props) {
             })
     }, [])
 
+    const handleCommentName = (e) => {
+        setCommentName(e.target.value);
+    }
+
+    const handleCommentMessage = (e) => {
+        setCommentMessage(e.target.value);
+    }
+
     const submitComment = () => {
-        fetch()
+        // fetch(`https://young-smoke-1917.fly.dev/posts/${postId}`, {
+        //     method: 'POST',
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify({
+        //         name: commentName,
+        //         message: commentMessage
+        //     })
+        // })
     }
 
     return (
@@ -81,19 +102,19 @@ function PostDetail(props) {
 
                         <div className='add-comment-container'>
                             <h2>Leave a Reply</h2>
-                            <div className='comment-form'>
+                            <form className='comment-form'>
                                 <div className='input-container'>
                                     <label htmlFor="name">Name</label>
-                                    <input id='name' type="text" required/>
+                                    <input id='name' onInput={handleCommentName} type="text" required/>
                                 </div>
 
                                 <div className='input-container'>
                                     <label htmlFor="message">Message</label>
-                                    <input id='message' type="text" required/>
+                                    <input id='message' onInput={handleCommentMessage} type="text" required/>
                                 </div>
                                 
-                                <div className='add-comment-btn' onClick={submitComment}>Post Comment</div>
-                            </div>
+                                <button className='add-comment-btn' onClick={submitComment}>Post Comment</button>
+                            </form>
                         </div>
                     </div>
 
