@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Posts from './components/Posts.jsx';
 import PostDetail from './components/PostDetail';
 import Login from './components/Login';
+import NotFound from './components/NotFound';
 
 function App() {
     const [displayLoader, setDisplayLoader] = useState(true);
@@ -37,6 +38,7 @@ function App() {
           <Route path="/posts" element={<Posts displayLoader={displayLoader} posts={posts}/>}/>
           <Route path="/posts/:id" element={<PostDetail posts={posts}/>}/>
           <Route path="/login" element={<Login/>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     )
