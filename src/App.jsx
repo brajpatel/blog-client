@@ -7,7 +7,7 @@ import Posts from './components/Posts.jsx';
 import PostDetail from './components/PostDetail';
 import Login from './components/Login';
 
-function RouteSwitch() {
+function App() {
     const [displayLoader, setDisplayLoader] = useState(true);
     const [posts, setPosts] = useState(null);
     
@@ -42,4 +42,4 @@ function RouteSwitch() {
     )
 }
 
-export default RouteSwitch;
+export default App;
