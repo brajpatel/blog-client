@@ -57,6 +57,9 @@ function PostDetail(props) {
                 message: commentMessage
             })
         })
+        .catch((err) => {
+            console.error("Error submitting comment:", err);
+        })
 
         navigate('/redirect');
     }
@@ -78,6 +81,7 @@ function PostDetail(props) {
                             <img src={post.image} alt={post.title}/>
                         </div>
                         <p className='post-content'>{post.content}</p>
+                        <p className='post-author'>Written by {post.author}</p>
                     </div>
 
                     <div className='comments-section'>
