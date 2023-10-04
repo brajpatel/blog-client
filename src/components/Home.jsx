@@ -1,10 +1,16 @@
 import './Home.css';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Loader from './Loader';
 import PostCard from './PostCard';
 
 function Home(props) {
     const { displayLoader, posts } = props;
+    const [featuredPosts, setFeaturedPosts] = useState(null);
+
+    useEffect(() => {
+        if(posts) setFeaturedPosts(posts.slice(1, 4));
+    }, [])
 
     return (
         <div className="home">
@@ -19,9 +25,9 @@ function Home(props) {
                 <h2>Featured</h2>
                 {displayLoader && <Loader/>}
 
-                {posts && (
+                {featuredPosts && (
                     <div className="featured-posts">
-                        {posts.map((post) => {
+                        {featuredPosts.map((post) => {
                             return (
                                 <Link to={`/posts/${post._id}`} key={post._id} className="link post-link">
                                     <PostCard title={post.title} image={post.image}/>
