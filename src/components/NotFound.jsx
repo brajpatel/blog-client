@@ -11,7 +11,7 @@ function NotFound() {
                     <Link to='/' className='link'>here</Link>
                 </p>
             </div>
-            <img src="../../public/not-found.png" alt="not found image"/>
+            <img src="/not-found.png" alt="not found image"/>
         </div>
     )
 }
