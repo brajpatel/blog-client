@@ -55,12 +55,9 @@ function PostDetail(props) {
                 name: commentName,
                 message: commentMessage
             })
-        })
-        .catch((err) => {
+        }).catch((err) => {
             console.error("Error submitting comment:", err);
         })
-
-        navigate('/redirect');
     }
 
     return (
