@@ -10,7 +10,7 @@ function Home(props) {
 
     useEffect(() => {
         if(posts) setFeaturedPosts(posts.slice(1, 4));
-    }, [])
+    }, [posts])
 
     return (
         <div className="home">

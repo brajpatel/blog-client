@@ -30,7 +30,6 @@ function PostDetail(props) {
                 console.error("Error fetching the selected post:", err);
             })
             .finally(() => {
-                setCurrentPost(postId);
                 setDisplayLoader(false);
             })
     }, [])
@@ -109,12 +108,12 @@ function PostDetail(props) {
                             <form className='comment-form'>
                                 <div className='input-container'>
                                     <label htmlFor="name">Name</label>
-                                    <input id='name' onInput={handleCommentName} type="text" required/>
+                                    <input id='name' onChange={handleCommentName} type="text" required/>
                                 </div>
 
                                 <div className='input-container'>
                                     <label htmlFor="message">Message</label>
-                                    <input id='message' onInput={handleCommentMessage} type="text" required/>
+                                    <input id='message' onChange={handleCommentMessage} type="text" required/>
                                 </div>
                                 
                                 <button className='add-comment-btn' onClick={submitComment} type='button'>Post Comment</button>
