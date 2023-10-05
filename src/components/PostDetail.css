@@ -153,6 +153,10 @@
         flex-direction: column;
     }
 
+    .post-image  {
+        max-width: 80%;
+    }
+
     .comments {
         display: flex;
         flex-direction: row;
@@ -162,5 +166,11 @@
 
     .comment {
         width: 35%;
+    }
+}
+
+@media(max-width: 790px) {
+    .post-image  {
+        max-width: 90%;
     }
 }
