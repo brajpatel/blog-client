@@ -11,7 +11,6 @@ import NotFound from './components/NotFound';
 function App() {
     const [displayLoader, setDisplayLoader] = useState(true);
     const [posts, setPosts] = useState(null);
-    const [currentPost, setCurrentPost] = useState(undefined);
     
     useEffect(() => {
         fetch('https://young-smoke-1917.fly.dev/posts')
@@ -37,9 +36,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home displayLoader={displayLoader} posts={posts}/>}/>
           <Route path="/posts" element={<Posts displayLoader={displayLoader} posts={posts}/>}/>
-          <Route path="/posts/:id" element={<PostDetail setCurrentPost={setCurrentPost}/>}/>
+          <Route path="/posts/:id" element={<PostDetail/>}/>
           <Route path="/login" element={<Login/>}/>
-          <Route path="/redirect" element={<Navigate to={`/posts/${currentPost}`}/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
